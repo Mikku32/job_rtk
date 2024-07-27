@@ -1,39 +1,26 @@
-import { useDispatch, useSelector } from "react-redux"
-import { CompanyCard } from "../components/CompanyCard"
-import { useEffect } from "react"
-import { getCompanies } from "../store/slices/companySlice"
-
+import { CompanyCard } from "../components/CompanyCard";
+import { useGetCompaniesQuery } from "../store/slices/companyApi";
 
 const Home = () => {
-  const dispatch = useDispatch()
+  const { data, isLoading, isError, error } = useGetCompaniesQuery();
 
-  const companyState = useSelector((state) => state.company)
-
-  useEffect(() => {
-    dispatch(getCompanies())
-  }, [])
-
-  if (companyState.loading) {
-    return <div>Loading...</div>
+  if (isLoading) {
+    return <div>Loading...</div>;
   }
 
-  if (companyState.isError) {
-    return <div>Error: {companyState.message}</div>
+  if (isError) {
+    return <div>Error</div>;
   }
 
   return (
     <div className="px-10 py-5">
-
-        <div className="flex flex-wrap gap-3">
-          {
-            companyState.companies.map((company) => (
-              <CompanyCard key={company.id} company={company} />
-            ))
-          }
-          
-        </div>
+      <div className="flex flex-wrap gap-3">
+        {data.map((company) => (
+          <CompanyCard key={company.id} company={company} />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

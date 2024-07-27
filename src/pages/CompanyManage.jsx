@@ -1,10 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
-import { createCompany, getCompanies } from "../store/slices/companySlice";
+import { useCreateCompanyMutation } from "../store/slices/companyApi";
 
 export const CompanyManage = () => {
-  const dispatch = useDispatch();
-
-  const companyState = useSelector((state) => state.company);
+  const [createCompany, { isLoading, isError }] = useCreateCompanyMutation();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -13,25 +10,19 @@ export const CompanyManage = () => {
     const logo = e.target.logo.value;
     const website = e.target.website.value;
 
-    try {
-      await dispatch(
-        createCompany({
-          name,
-          description,
-          logo,
-          website,
-        })
-      ).unwrap();
-    } catch (error) {
-      alert("error");
-    }
+    createCompany({
+      name,
+      description,
+      logo,
+      website,
+    });
   };
 
-  if (companyState.createLoading) {
+  if (isLoading) {
     return <div>Creating Company...</div>;
   }
 
-  if (companyState.createError) {
+  if (isError) {
     return <div>Error: </div>;
   }
 
