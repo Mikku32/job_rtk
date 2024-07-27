@@ -1,0 +1,205 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Google",
+      "description": "A global technology company specializing in internet services and products.",
+      "website": "https://www.google.com",
+      "logo": "https://avatar.iran.liara.run/username?username=Google",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 2,
+      "name": "Netflix",
+      "description": "A streaming service offering a wide variety of award-winning TV shows, movies, anime, documentaries, and more.",
+      "website": "https://www.netflix.com",
+      "logo": "https://avatar.iran.liara.run/username?username=Netflix",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 3,
+      "name": "Dropbox",
+      "description": "A cloud-based file storage service that allows users to save files online and sync them to their devices.",
+      "website": "https://www.dropbox.com",
+      "logo": "https://avatar.iran.liara.run/username?username=Dropbox",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 4,
+      "name": "Amazon",
+      "description": "An e-commerce and cloud computing company known for its online marketplace and AWS cloud services.",
+      "website": "https://www.amazon.com",
+      "logo": "https://avatar.iran.liara.run/username?username=Amazon",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 5,
+      "name": "Microsoft",
+      "description": "A technology company that develops, licenses, and supports a wide range of software products and services.",
+      "website": "https://www.microsoft.com",
+      "logo": "https://avatar.iran.liara.run/username?username=Microsoft",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "name": "HowinCloud",
+      "description": "ultimate solutions",
+      "logo": "https://avatar.iran.liara.run/username?username=HowinCloud",
+      "website": "https://www.howincloud.com",
+      "id": 6
+    },
+    {
+      "name": "HowinCloudd",
+      "description": "ultimate solutions",
+      "logo": "https://avatar.iran.liara.run/username?username=HowinCloud",
+      "website": "https://www.howincloud.com",
+      "id": 7
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Software Engineer",
+      "company_id": 1,
+      "description": "Develop and maintain web applications.",
+      "location": "Mountain View, CA",
+      "salary": "120000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 2,
+      "title": "Data Scientist",
+      "company_id": 1,
+      "description": "Analyze large datasets to drive business insights.",
+      "location": "New York, NY",
+      "salary": "130000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 3,
+      "title": "Product Manager",
+      "company_id": 2,
+      "description": "Manage the product lifecycle and roadmap.",
+      "location": "Los Gatos, CA",
+      "salary": "140000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 4,
+      "title": "UX Designer",
+      "company_id": 2,
+      "description": "Design user-friendly interfaces and experiences.",
+      "location": "San Francisco, CA",
+      "salary": "115000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 5,
+      "title": "Backend Developer",
+      "company_id": 3,
+      "description": "Build and maintain server-side applications and APIs.",
+      "location": "San Jose, CA",
+      "salary": "125000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 6,
+      "title": "Frontend Developer",
+      "company_id": 3,
+      "description": "Develop user-facing features for web applications.",
+      "location": "Austin, TX",
+      "salary": "120000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 7,
+      "title": "Cloud Architect",
+      "company_id": 4,
+      "description": "Design and manage cloud infrastructure.",
+      "location": "Seattle, WA",
+      "salary": "150000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 8,
+      "title": "Database Administrator",
+      "company_id": 4,
+      "description": "Manage and maintain database systems.",
+      "location": "Arlington, VA",
+      "salary": "110000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 9,
+      "title": "System Analyst",
+      "company_id": 5,
+      "description": "Analyze and design IT systems to meet business needs.",
+      "location": "Redmond, WA",
+      "salary": "125000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 10,
+      "title": "Cybersecurity Specialist",
+      "company_id": 5,
+      "description": "Protect company systems and data from cyber threats.",
+      "location": "Chicago, IL",
+      "salary": "140000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 11,
+      "title": "DevOps Engineer",
+      "company_id": 1,
+      "description": "Automate and streamline development and deployment processes.",
+      "location": "Los Angeles, CA",
+      "salary": "130000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 12,
+      "title": "Marketing Specialist",
+      "company_id": 2,
+      "description": "Develop and execute marketing strategies and campaigns.",
+      "location": "Boston, MA",
+      "salary": "110000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 13,
+      "title": "HR Manager",
+      "company_id": 3,
+      "description": "Oversee and manage human resources activities and policies.",
+      "location": "Denver, CO",
+      "salary": "120000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    },
+    {
+      "id": 14,
+      "title": "Sales Manager",
+      "company_id": 4,
+      "description": "Manage sales teams and develop strategies to drive revenue.",
+      "location": "Philadelphia, PA",
+      "salary": "135000",
+      "created_at": "2024-07-27T00:00:00.000000Z",
+      "updated_at": "2024-07-27T00:00:00.000000Z"
+    }
+  ]
+}

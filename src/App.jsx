@@ -5,6 +5,7 @@ import store from './store'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { NavBar } from './components/NavBar'
 import Home from './pages/Home'
+import { CompanyManage } from './pages/CompanyManage'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
               <NavBar />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/company/manage" element={<CompanyManage />} />
                     
                 </Routes>
           </div>
