@@ -2,6 +2,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 
 export const companyApi = createApi({
+
+        tagTypes:["company"], //for reloading 
+
     reducerPath:"companyApi",
     baseQuery:fetchBaseQuery({baseUrl:"http://localhost:3000"}),
 
@@ -9,7 +12,8 @@ export const companyApi = createApi({
     endpoints:(builder)=>({
         //endpoint for getting
         getCompany:builder.query({
-            query:()=>"/companies"
+            query:()=>"/companies",
+            providesTags:["company"]  //for reloading
         }),
 
         //endpoint for posting
@@ -18,7 +22,8 @@ export const companyApi = createApi({
                 url:"/companies",
                 method:"POST",
                 body:company
-            })
+            }),
+            invalidatesTags:["company"] //for reloading
         })
     })
 
