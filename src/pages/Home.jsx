@@ -32,8 +32,8 @@ const Home = () => {
   }
 
   return (
-    <div className=" p-4 border border-red-500 rounded gap-3">
-
+    <div className=" p-4 border border-red-500 rounded gap-3 flex flex-col">
+      <div className="text-3xl flex justify-center"><h2>Companies</h2> </div>
 
       {data.slice().reverse().map((company) => (
         <div key={company.id} className="p-3 mb-4 border border-white rounded-lg ">
