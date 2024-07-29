@@ -1,12 +1,13 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { postCompany } from '../store/slice/companySlice'
+import { useNavigate } from 'react-router-dom'
 
 const Post = () => {
 
     const dispatch = useDispatch()
     const companyState = useSelector((state) => state.company)
-
+    const navigate = useNavigate()
     const onSubmit = async (e) => {
         e.preventDefault();
         const name = e.target.name.value
@@ -16,6 +17,7 @@ const Post = () => {
 
         try {
             await dispatch(postCompany({ name, description, website, logo }))
+            navigate("/")
         } catch (error) {
             console.log(error)
         }
