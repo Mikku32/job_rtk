@@ -47,33 +47,35 @@ const Post = () => {
 
 
     return (
-        <div>
-            <form className='flex flex-col gap-3'
-                id='post-company'
-                onSubmit={onSubmit}
-            >
-                <input type="text"
-                    placeholder="Company Name"
-                    className="input input-bordered w-full max-w-xs"
-                    id='name'
-                />
-                <input type="text"
-                    placeholder="description"
-                    className="input input-bordered w-full max-w-xs"
-                    id='description'
-                />
-                <input type="text"
-                    placeholder="Companywebsite"
-                    className="input input-bordered w-full max-w-xs"
-                    id='website'
-                />
-                <input type="text"
-                    placeholder="Company logo"
-                    className="input input-bordered w-full max-w-xs"
-                    id='logo'
-                />
-            </form>
-            <button type="submit" form="post-company" >Submit</button>
+        <div className='flex justify-center items-center h-screen  w-full' >
+            <div className='flex flex-col gap-3 w-1/2 p-5 items-center justify-center  border'>
+                <form className='flex flex-col gap-3 '
+                    id='post-company'
+                    onSubmit={onSubmit}
+                >
+                    <input type="text"
+                        placeholder="Company Name"
+                        className="input input-bordered w-full max-w-xs"
+                        id='name'
+                    />
+                    <input type="text"
+                        placeholder="description"
+                        className="input input-bordered w-full max-w-xs"
+                        id='description'
+                    />
+                    <input type="text"
+                        placeholder="Companywebsite"
+                        className="input input-bordered w-full max-w-xs"
+                        id='website'
+                    />
+                    <input type="text"
+                        placeholder="Company logo"
+                        className="input input-bordered w-full max-w-xs"
+                        id='logo'
+                    />
+                </form>
+                <button type="submit" form="post-company" className='border rounded-md p-2 mt-3'>Submit</button>
+            </div>
         </div>
 
     )
