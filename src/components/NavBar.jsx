@@ -15,6 +15,11 @@ export const NavBar = () => {
                 Jobs
               </Link>
             </div>
+            <div>
+              <Link to="/post" className="ml-4 text-gray-300 hover:text-white">
+                Post
+              </Link>
+            </div>
           </div>
         </div>
       </div>

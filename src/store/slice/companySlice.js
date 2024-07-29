@@ -1,19 +1,33 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+import axios from "axios"
 
 
 const initialstate={
     companies :[],
     isLoading:false,
     isError:false,
-    message:''
+    message:'',
+
+    addPostloading : false,
+    addPostisError : false,
+    addPostmessage : '',
+
 }
 
 export const getCompany = createAsyncThunk('company/getcompany',
     async()=>{
-       const res= await fetch("http://localhost:3000/companies")
-       const data = await res.json()
+       const res= await axios.get("http://localhost:3000/companies")
+      
 
-       return data
+       return res.data
+    }
+)
+
+export const postCompany = createAsyncThunk('company/postcompany',
+    async(company)=>{
+        const res = await axios.post("http://localhost:3000/companies",company)
+
+        return res.data
     }
 )
 
@@ -36,6 +50,16 @@ export const companyslice = createSlice({
         .addCase(getCompany.rejected,(state)=>{
             state.isLoading = false
             state.isError = true
+        })
+        .addCase(postCompany.pending,(state)=>{
+            state.addPostloading = true
+        })
+        .addCase(postCompany.fulfilled,(state,action)=>{
+            state.addPostloading = false
+        })
+        .addCase(postCompany.rejected,(state)=>{
+            state.addPostloading = false
+            state.addPostisError = true
         })
     }
 })
