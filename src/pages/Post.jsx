@@ -2,41 +2,48 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { postCompany } from '../store/slice/companySlice'
 import { useNavigate } from 'react-router-dom'
+import { usePostCompanyMutation } from '../store/slice/companyApi'
 
 const Post = () => {
 
-    const dispatch = useDispatch()
-    const companyState = useSelector((state) => state.company)
+    // const dispatch = useDispatch()
+    // const companyState = useSelector((state) => state.company)
     const navigate = useNavigate()
+    // const onSubmit = async (e) => {
+    //     e.preventDefault();
+    //     const name = e.target.name.value
+    //     const description = e.target.description.value
+    //     const website = e.target.website.value
+    //     const logo = e.target.logo.value
+
+    //     try {
+    //         await dispatch(postCompany({ name, description, website, logo }))
+    //         navigate("/")
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+
+
+    // };
+
+    const [postCompany,
+        {
+            isLoading, isError
+        }
+    ] = usePostCompanyMutation()
     const onSubmit = async (e) => {
         e.preventDefault();
         const name = e.target.name.value
         const description = e.target.description.value
         const website = e.target.website.value
         const logo = e.target.logo.value
-
-        try {
-            await dispatch(postCompany({ name, description, website, logo }))
+        postCompany({ name, description, website, logo }),
             navigate("/")
-        } catch (error) {
-            console.log(error)
-        }
-
 
     };
 
 
 
-
-    if (companyState.addpostloading) {
-        return <h1>Loading...</h1>
-    }
-
-
-
-    if (companyState.addpostisError) {
-        return <h1>Error</h1>
-    }
 
 
     return (
