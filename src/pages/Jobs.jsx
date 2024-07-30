@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useGetJobQuery } from '../store/slice/jobsApi'
 
 const Jobs = () => {

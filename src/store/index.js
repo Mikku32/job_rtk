@@ -13,8 +13,8 @@ const store = configureStore({
     },
     devTools: true,
 
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(companyApi.middleware), //caching
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(jobApi.middleware), //caching
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(companyApi.middleware,jobApi.middleware), //caching
+    
 
 });
 
