@@ -1,6 +1,6 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { getCompany } from "../store/slice/companySlice"
+// import { useEffect } from "react"
+// import { useDispatch, useSelector } from "react-redux"
+// import { getCompany } from "../store/slice/companySlice"
 import { useGetCompanyQuery } from "../store/slice/companyApi"
 
 

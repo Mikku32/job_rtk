@@ -1,6 +1,6 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { postCompany } from '../store/slice/companySlice'
+// import React from 'react'
+// import { useDispatch, useSelector } from 'react-redux'
+// import { postCompany } from '../store/slice/companySlice'
 import { useNavigate } from 'react-router-dom'
 import { usePostCompanyMutation } from '../store/slice/companyApi'
 
@@ -42,7 +42,13 @@ const Post = () => {
 
     };
 
+    if (isLoading) {
+        return <h1>Loading...</h1>
+    }
 
+    if (isError) {
+        return <h1>Error</h1>
+    }
 
 
 
