@@ -12,7 +12,10 @@ export const companyApi = createApi({
     endpoints:(builder)=>({
         //endpoint for getting
         getCompany:builder.query({
-            query:()=>"/companies",
+            query:()=>({
+                url:"/companies",
+                method:"GET"
+            }),
             providesTags:["company"]  //for reloading
         }),
 
